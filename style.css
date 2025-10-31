@@ -1,0 +1,1554 @@
+
+body{
+  background: #e7e1e1;
+}
+/* Navbar shift down because of top-bar */
+.navbar {
+
+  background: #000;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+/* Navbar */
+.navbar {
+  /* background: transparent; */
+  padding: 0.8rem 1.5rem;
+  z-index: 1000;
+}
+.nav-link {
+  color: #070707 !important;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+.nav-link:hover {
+  color: #f39c12 !important;
+}
+.nav-link i {
+  margin-right: 6px;
+  color: #f39c12;
+}
+.dropdown-menu {
+  background-color: #222;
+  border-radius: 10px;
+}
+.dropdown-menu .dropdown-item {
+  color: #ddd;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: #333;
+  color: #f39c12;
+}
+
+/* Search Bar */
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(198,155,123,0.3);
+  border-radius: 30px;
+  padding: 6px 15px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  color: black;
+  outline: none;
+  padding: 8px;
+  width: 150px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  transition: all 0.4s ease;
+}
+
+.search-bar input::placeholder {
+  color: #ccc;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  color: #c69b7b;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.search-bar:hover,
+.search-bar:focus-within {
+  border-color: #c69b7b;
+  box-shadow: 0 0 15px rgba(198,155,123,0.4);
+}
+
+.search-bar:focus-within input {
+  width: 220px;
+}
+
+.search-bar button:hover {
+  color: #a57f63;
+}
+
+
+.navbar {
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  background-color: transparent;
+}
+
+.navbar.scrolled {
+  background-color: white !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar.scrolled .nav-link {
+  color: #333 !important;
+}
+
+.navbar.scrolled .nav-link:hover {
+  color: #f39c12 !important;
+}
+
+.navbar.scrolled .navbar-brand img {
+  filter: none; /* remove any filter if you have */
+}
+
+
+@media (max-width: 992px) {
+  .search-bar {
+    width: 160px;
+  }
+}
+
+/* ✅ Padding fixes for mobile view */
+@media (max-width: 992px) {
+  
+
+  /* Menu items inside toggle */
+  .navbar-nav .nav-item {
+    padding-left: 15px;
+  }
+
+  /* Dropdown items inside toggle */
+  .navbar-nav .dropdown-menu .dropdown-item {
+    padding-left: 20px;
+  }
+}
+
+
+.brand-name {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Main Word (Gracious) */
+.brand-g {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #d4a037, #f7d98c, #d4a037);
+  background-clip: text;              /* Standard syntax */
+  -webkit-background-clip: text;      /* Safari/Chrome support */
+  -webkit-text-fill-color: transparent;
+  color: transparent;                 /* Fallback */
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Shine Animation */
+.brand-g::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -70%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.7), transparent);
+    transform: skewX(-25deg);
+    transition: 0.6s;
+}
+.brand-name:hover .brand-g::before {
+    left: 120%;
+}
+
+/* Small word (Garments) */
+.brand-small {
+    font-family: 'Verdana', sans-serif;
+    font-size: 14px;
+    color:  #d4a037;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: .3s ease;
+}
+
+/* Hover animation */
+.brand-name:hover .brand-g {
+    transform: scale(1.12) translateY(-2px);
+    text-shadow: 0px 0px 12px rgba(217,164,65,0.6);
+}
+.brand-name:hover .brand-small {
+    color: #d9a441;
+    transform: translateY(-2px);
+}
+
+
+.brand-name {
+    position: relative;
+    display: inline-block;
+}
+
+.brand-name::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #c9922a, #f5d372);
+    border-radius: 10px;
+    transition: width .35s ease;
+    pointer-events: none;
+}
+
+.brand-name:hover::after {
+    width: 100%;
+}
+
+
+/* ============================
+   GG MONOGRAM BADGE
+   ============================ */
+.gg-badge {
+    background: radial-gradient(circle, #e4b450, #b8862d);
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 12px;
+    border-radius: 50%;
+    color: #fff;
+    margin-right: 8px;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: 0.3s ease;
+}
+.gg-badge:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 12px rgba(212,160,55,0.8);
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 700px){
+    .brand-small { display: none; }
+    .brand-g { font-size: 28px; }
+    .gg-badge { padding: 8px 10px; font-size: 13px; }
+}
+
+
+
+
+/* .hero img {
+  width: 100%;
+  height: 900px; 
+  display: block;
+} */
+.banner-section {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+}
+
+.banner-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* gradient overlay for better readability */
+.banner-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.1));
+  z-index: 1;
+}
+
+/* text container */
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 2;
+  max-width: 600px;
+  text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  text-align: left;
+
+  opacity: 0;
+  animation: floatIn 1.8s ease-in-out forwards, gentleFloat 6s ease-in-out infinite;
+}
+
+/* heading style */
+.banner-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* highlighted brand name */
+.banner-content h1 span {
+  color: #f4c542;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* paragraph style */
+.banner-content p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #f1f1f1;
+}
+
+/* entrance animation */
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-60%) translateX(-20px);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-52%) translateX(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+/* subtle continuous floating motion */
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(-50%) translateX(0);
+  }
+  50% {
+    transform: translateY(-53%) translateX(2px);
+  }
+}
+
+
+
+
+
+.shop-category-hero {
+  display: flex;
+  gap: 20px; /* space between the two images */
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.category-hero {
+  flex: 1 1 calc(50% - 10px); /* two images side by side */
+  overflow: hidden;
+}
+
+.category-hero img {
+  width: 100%;
+  height: 800px; /* adjust height if needed */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shop-category-hero {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .category-hero img {
+    height: 400px;
+  }
+}
+
+
+
+/* Custom CSS for Mobile Search Bar appearance  */
+@media (max-width: 992px) {
+  /* Adjustments for better mobile layout */
+  
+  /* Ensure the mobile search bar is styled correctly */
+  .search-bar.d-lg-none input {
+    color: #000 !important; 
+    background: #fff !important;
+  }
+  
+  .search-bar.d-lg-none button {
+      color: #000 !important; 
+  }
+  
+  /* Prevent the desktop search bar focus style from applying to mobile */
+  .search-bar:focus-within input {
+    /* Reset the width expansion for mobile */
+    width: 100%; 
+  }
+  
+  
+}
+
+
+/* Adjust other navbar elements colors if needed when scrolled */
+
+
+.promo-section {
+  background: linear-gradient(135deg, #f39c12, #ffb84d);
+  color: white;
+  overflow: hidden;
+}
+
+.promo-section img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.promo-section img:hover {
+  transform: scale(1.05);
+}
+
+.brands-section {
+  background-color: #f7f7f7;
+}
+
+.brand-card {
+  background: #fff;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 150px;
+
+}
+
+.brand-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.brand-card img {
+  max-height: 80px;
+  object-fit: contain;
+}
+
+
+/* Base Flip Card */
+.flip-card {
+  perspective: 1000px;
+  width: 100%;
+}
+
+.small-flip {
+  height: 220px; /* 👈 Controlled height */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and Back */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Front Side */
+.flip-card-front {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.brand-img {
+  max-width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.brand-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Back Side */
+.flip-card-back {
+  background: #f1f1f1;
+  transform: rotateY(180deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding-top: 20px;
+}
+
+
+
+
+/* Masonry Horizontal Grid */
+.masonry-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+/* Hover Card */
+.hover-card {
+  position: relative;
+  flex: 0 0 250px;
+  height: 350px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Card Images (front + back stacked) */
+.card-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card-image img {
+  position: absolute;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+/* Front image visible */
+.card-image .front { opacity: 1; z-index: 1; }
+/* Back image hidden */
+.card-image .back { opacity: 0; z-index: 2; }
+
+/* Hover: swap images with zoom */
+.hover-card:hover .front { opacity: 0; transform: scale(1.05); }
+.hover-card:hover .back  { opacity: 1; transform: scale(1.05); }
+
+/* Overlay for icons centered at bottom */
+.card-overlay {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+
+.hover-card:hover .card-overlay {
+  opacity: 1;
+}
+
+/* Icon Buttons: Round and White */
+.icon-btn {
+  background: #fff;
+  color: #333;
+  font-size: 18px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-btn:hover {
+  background: #f39c12;
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+}
+
+.slider-dots {
+  text-align: center;
+  margin-top: 15px; /* below cards */
+}
+
+.slider-dots .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.slider-dots .dot.active {
+  background-color: #f39c12; /* active dot color */
+}
+
+
+    
+
+
+
+  
+/* Chat Button */
+.live-chat-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px; /* ✅ LEFT SIDE */
+  background-color: #f39c12; /* ✅ Accent Color */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px 18px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+}
+
+.live-chat-btn:hover {
+  background-color: rgba(243, 156, 18, 0.8);
+}
+
+/* Chat Box */
+.live-chat-box {
+  position: fixed;
+  bottom: 80px;
+  left: 30px; /* ✅ LEFT SIDE */
+  width: 320px;
+  max-height: 450px;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+  animation: slideUp 0.3s ease forwards;
+}
+
+@keyframes slideUp {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Header */
+.chat-header {
+  background-color: #f39c12; /* ✅ Accent Color */
+  color: white;
+  padding: 12px 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.chat-header button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Messages */
+.chat-messages {
+  padding: 12px;
+  flex-grow: 1;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Message Bubbles */
+.message {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 20px;
+  line-height: 1.3;
+  animation: fadeIn 0.3s ease;
+}
+
+.user-message {
+  background-color: #f39c12; /* ✅ Accent Color */
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.bot-message {
+  background-color: #e9ecef;
+  color: #212529;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(5px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Input Area */
+.chat-input-area {
+  display: flex;
+  border-top: 1px solid #dee2e6;
+  padding: 8px;
+  background: white;
+}
+
+#chatInput {
+  flex-grow: 1;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#chatInput:focus {
+  border-color: #f39c12; /* ✅ Accent Color */
+}
+
+#sendBtn {
+  margin-left: 8px;
+  background-color: #f39c12; /* ✅ Accent Color */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+#sendBtn:hover {
+  background-color: rgba(243, 156, 18, 0.8);
+}
+
+
+
+
+
+
+/* ===== About Us Section (with auto video) ===== */
+.about-us {
+  background: #f9f9f9;
+  padding: 80px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about-image {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.about-image img {
+  width: 90%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-content {
+  flex: 1 1 50%;
+  padding: 20px 30px;
+}
+
+.about-content h2 {
+  font-size: 36px;
+  color: #222;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.about-content h3 {
+  color: #f39c12;
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.about-content p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.about-highlights {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.highlight {
+  flex: 1 1 30%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.highlight:hover {
+  transform: translateY(-5px);
+}
+
+.highlight i {
+  font-size: 30px;
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+.highlight h4 {
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.highlight p {
+  font-size: 14px;
+  color: #666;
+}
+
+.about-btn {
+  display: inline-block;
+  margin-top: 30px;
+  background: #f39c12;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.about-btn:hover {
+  background:#8d7144;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  .about-highlights {
+    justify-content: center;
+  }
+}
+
+
+
+/* Initially hide the image and move it to left */
+.about-image {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease-out; /* smooth animation */
+}
+
+/* When visible */
+.about-image.show-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+
+
+/* ---------- Navbar basics ---------- */
+    .navbar { padding: 0.6rem 1rem; }
+    .navbar .nav-link { color: #222; font-weight: 600; }
+    .navbar .nav-link:hover { color: #f39c12; }
+
+    /* ---------- Mega menu (full width glass) ---------- */
+    .mega .dropdown-menu {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      border: 0;
+      padding: 24px 0;
+      display: none;               /* toggled via hover / .show */
+      background: rgba(8,10,12,0.56); /* semi-transparent black */
+      backdrop-filter: blur(8px);  /* glass blur */
+      -webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 10px 30px rgba(2,6,23,0.45);
+      z-index: 2000;
+    }
+
+    /* Inner container to keep content centered and limited width */
+    .mega-menu .inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 18px;
+      color: #fff; /* white text by default */
+    }
+
+    .mega-menu .row { display:flex; gap: 24px; }
+    .mega-menu .col {
+      flex: 1;
+      min-width: 160px;
+    }
+
+    .mega-menu h6 {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .mega-menu .dropdown-item {
+      color: #fff;
+      padding: 6px 0;
+      display: block;
+      background: transparent;
+      border: 0;
+      opacity: .95;
+    }
+
+    .mega-menu .dropdown-item:hover {
+      color: #111;
+      background: #f39c12;
+      border-radius: 6px;
+      padding-left: 8px;
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    /* Small helper: icon + text spacing */
+    .mega-menu .fa-fw { width: 1.25em; }
+
+    /* Make sure the dropdown arrow doesn't appear (we use hover) */
+    .nav-item.dropdown > .nav-link::after { display: none; }
+
+    /* ---------- Show on hover for desktop ---------- */
+    @media (hover: hover) and (pointer: fine) {
+      .nav-item.mega:hover > .dropdown-menu { display: block; }
+    }
+
+    /* ---------- Mobile: ensure dropdown is handled by Bootstrap click/tap ---------- */
+    @media (max-width: 991.98px) {
+      .mega .dropdown-menu { position: static; background: #111; backdrop-filter: none; -webkit-backdrop-filter: none; padding: 12px; }
+      .mega-menu .inner { padding: 8px; }
+      .mega-menu .dropdown-item { color: #eee; }
+      .nav-item.mega > .nav-link::after { display: inline-block; } /* show default caret if desired */
+    }
+
+    /* ---------- Minor polish ---------- */
+    
+    .dropdown-item small { display:block; color: rgba(255,255,255,0.7); font-weight:400; }
+
+    /* Prevent overflow issues on very small screens */
+    .mega .dropdown-menu { overflow: visible; }
+
+
+    .promo-section {
+  background: linear-gradient(135deg, #f39c12, #ffb84d);
+  color: white;
+  overflow: hidden;
+}
+
+.promo-section img {
+  max-width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+
+
+/* Promo Section Container */
+.promo-section {
+  background: #fff; /* clean white */
+  border-radius: 25px;
+  box-shadow: 0 12px 30px rgba(243, 156, 18, 0.15); /* soft orange shadow */
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 3rem auto; /* center horizontally */
+}
+
+/* Promo Card */
+.promo-card {
+  color: #222; /* dark text for contrast */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Title Styling */
+.promo-title {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #f39c12; /* brand orange color */
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Subtitle Styling */
+.promo-subtitle {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #555; /* medium gray for readability */
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}
+
+
+
+/* Footer Glass Style *//* Footer Glass Dark Style */
+.footer-glass {
+  background: rgba(20, 20, 20, 0.85); /* dark background */
+  backdrop-filter: blur(12px);
+  color: #fff;
+  padding: 60px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer-brand {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #d8b071; /* Elegant gold */
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.footer-brand span {
+    font-size: 18px;
+    font-weight: 300;
+    color: #c7c7c7;
+    display: block;
+    margin-top: 4px;
+}
+
+
+
+
+.footer-col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #f39c12;
+}
+
+.footer-col p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #f39c12;
+}
+
+/* Social Links */
+.social-links a {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #f39c12;
+}
+
+/* Newsletter */
+.newsletter form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.newsletter input[type="email"] {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.newsletter input::placeholder {
+  color: #aaa;
+}
+
+.newsletter button {
+  background: #f39c12;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.newsletter button:hover {
+  background: #e6b800;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 15px;
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+.footer-bottom a {
+  color: #bbb;
+  text-decoration: underline;
+  margin: 0 5px;
+}
+
+.footer-bottom a:hover {
+  color: #f39c12;
+}
+
+/* Existing Responsive adjustments (modified) */
+@media (max-width: 768px) {
+    /* Force columns to stack vertically */
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Override the large-screen min-width */
+    .footer-col {
+        min-width: 100%; /* Force columns to take full width when stacked */
+        flex: 1 1 100%;
+        text-align: center; /* Center content when stacked */
+    }
+
+    /* Newsletter form stacks vertically */
+    .newsletter form {
+        flex-direction: column;
+        max-width: 300px; /* Optional: limit width of form for a cleaner look */
+        margin: 10px auto 0;
+    }
+
+    .newsletter button {
+        width: 100%;
+    }
+    
+    /* Center the social links when stacked */
+    .social-links {
+        text-align: center;
+    }
+}
+
+/* 🟢 NEW: Critical Adjustments for very small phones (max-width: 576px) */
+@media (max-width: 576px) {
+    .footer-glass {
+        padding: 40px 10px 15px; /* Reduce vertical and horizontal padding */
+    }
+    
+    .footer-container {
+        gap: 20px; /* Reduce space between stacked sections */
+    }
+
+    .footer-col h4 {
+        font-size: 1.1rem; /* Slightly smaller headings */
+        margin-bottom: 10px;
+    }
+
+    .footer-col p {
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
+    
+    /* Ensure social links are easily clickable */
+    .social-links a {
+        font-size: 1.2rem;
+        margin: 0 8px;
+    }
+}
+
+
+        /* --- Base Testimonial Block Styles --- */
+.testimonial-block {
+    background-color: #ffffff;
+    padding: 4rem 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Grid Overlay (Aesthetic from the original image) */
+.testimonial-block::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    /* Keep background gradient style */
+    background: linear-gradient(90deg, transparent 50%, rgba(0,0,0,0.05) 50%),
+                linear-gradient(0deg, transparent 50%, rgba(0,0,0,0.05) 50%);
+    background-size: 20px 20px;
+    opacity: 0.05;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+/* 🟢 NEW: Styling for the proper Heading text "What Our Clients Say" */
+.testimonial-heading {
+    /* Use your site's heading font variable or a standard font */
+    font-family: var(--font-heading-family, 'Poppins', sans-serif);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark, #212529);
+    margin-bottom: 2rem; /* Give some space before the quote */
+}
+
+/* ⚠️ ADJUSTED: Styling for a small Quote Icon (optional if you use an icon) */
+.quote-icon {
+    color: black;
+    font-size: 2rem; /* Smaller icon size */
+    line-height: 0;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    opacity: 0.8;
+}
+
+/* 🟢 ADJUSTED: Testimonial Text Display - Fixes the font issue */
+#testimonial-text {
+    /* Use your site's body font variable or a standard font */
+    font-family: var(--font-body-family, 'Arial', sans-serif); 
+    font-size: 1.25rem; /* Readable size */
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Profile Info and Thumbnails (No change needed here) --- */
+.profile-info { position: relative; z-index: 1; margin-bottom: 2.5rem; }
+#profile-name { font-weight: 700; color: var(--text-dark); margin-bottom: 0; font-size: 1rem; }
+#profile-title { color: #6c757d; font-size: 0.9rem; }
+.profile-selector { display: flex; justify-content: center; gap: 15px; position: relative; z-index: 1; }
+.profile-thumb { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; cursor: pointer; opacity: 0.4; transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s; border: 3px solid transparent; }
+.profile-thumb.active { opacity: 1; transform: scale(1.1); border-color: var(--primary-blue); box-shadow: 0 0 0 4px rgba(44, 123, 229, 0.3); }
+.profile-thumb:hover:not(.active) { opacity: 0.6; filter: grayscale(50%); }
+
+
+/* ---------------------------------------------------------------------- */
+/* 🟢 ADJUSTED: Responsive Adjustments: Tablet (max-width: 768px) */
+/* ---------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .testimonial-block {
+        padding: 3rem 1.5rem; /* Slightly reduced padding */
+    }
+    
+    .testimonial-heading {
+        font-size: 2rem; /* Shrink heading on tablet */
+        margin-bottom: 1.5rem;
+    }
+    
+    #testimonial-text {
+        font-size: 1.1rem; 
+    }
+    
+    .profile-thumb {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* ---------------------------------------------------------------------- */
+/* 🟢 NEW: Critical Responsive Adjustments: Mobile (max-width: 576px) */
+/* ---------------------------------------------------------------------- */
+@media (max-width: 576px) {
+    .testimonial-block {
+        padding: 2rem 10px; /* Aggressively reduced padding for smallest screens */
+        box-shadow: none; 
+    }
+    
+    .testimonial-heading {
+        font-size: 1.4rem; /* Significantly shrink heading */
+        margin-bottom: 1rem;
+    }
+
+    #testimonial-text {
+        font-size: 1rem; /* Standard mobile body text size */
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+    }
+
+    .profile-selector {
+        gap: 8px; /* Reduce gap between profile thumbnails */
+    }
+    
+    .profile-thumb {
+        width: 35px; /* Significantly smaller profile thumbnails */
+        height: 35px;
+    }
+}
+        .team-section {
+            width: 100%;
+            max-width: 1200px; /* Limit overall width */
+            margin:  0 auto;
+        }
+
+        .team-heading {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #222321;
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem; /* Spacing between cards */
+        }
+
+        .team-card {
+            background-color: transparent; /* Main background for the overall card shape */
+            border-radius: 999px; /* Pill shape */
+            width: 250px; /* Fixed width for consistency */
+            height: 380px; /* Fixed height */
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px; /* Space for top text */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Top background color sections */
+      
+        .team-card.sydney .card-top-bg { background-color: #f0f0f0; /* Very light gray */ }
+        .team-card.stephani .card-top-bg { background-color: #e6f0ff; /* Light blue */ }
+        .team-card.rachel .card-top-bg { background-color: #ffe8d6; /* Light orange */ }
+
+
+        .card-top-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%; /* Top half of the card */
+            border-radius: 999px 999px 0 0; /* Keep top rounded */
+            z-index: 1;
+        }
+        
+        /* Text overlay on the top half */
+        .card-text-overlay {
+            position: relative;
+            z-index: 2; /* Above the background color */
+            text-align: center;
+            color: var(--text-dark); /* Default text color, adjust if needed */
+            margin-bottom: 1rem;
+        }
+        .card-text-overlay .name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.2rem;
+            line-height: 1.2;
+        }
+        .card-text-overlay .title {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.2;
+        }
+
+        /* Adjust text colors for light backgrounds */
+
+        .team-card.sydney .card-text-overlay .name,
+        .team-card.sydney .card-text-overlay .title,
+        .team-card.stephani .card-text-overlay .name,
+        .team-card.stephani .card-text-overlay .title,
+        .team-card.rachel .card-text-overlay .name,
+        .team-card.rachel .card-text-overlay .title {
+            color: #333; /* Darker text for light backgrounds */
+        }
+
+
+        .member-img {
+            width: 100%;
+            height: 250px; /* Image takes the bottom half */
+            object-fit: cover;
+            border-radius: 999px; /* Makes the image circular within its area */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 3; /* Image on top of everything */
+        }
+
+        /* Specific image adjustments if needed */
+        .team-card.stephani .member-img { object-position: top center; }
+        .team-card.rachel .member-img { object-position: center bottom; }
+
+
+        @media (max-width: 768px) {
+            .team-heading {
+                font-size: 2.5rem;
+            }
+            .team-card {
+                width: 220px;
+                height: 350px;
+            }
+            .card-text-overlay .name {
+                font-size: 1.3rem;
+            }
+            .card-text-overlay .title {
+                font-size: 0.85rem;
+            }
+        }
+
+
+        /* Custom fix for very small devices (less than 424px wide) */
+@media (max-width: 424px) {
+  
+  /* 1. Shrink the mobile search bar container further */
+  .container-fluid .search-bar.d-lg-none {
+    /* Reduce max-width to ensure space for the toggler */
+    max-width: 100px !important; 
+    /* Remove any unnecessary margin to save space */
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 4px 8px; /* Reduce padding inside the search bar */
+  }
+ 
+  
+  /* 3. Reduce padding on the entire navbar to save horizontal space */
+  .navbar {
+    padding: 0.5rem 5px; /* Use minimal padding on the sides */
+  }
+  
+  /* Ensure the search bar input width is minimal */
+  .search-bar input {
+      width: 70px !important;
+      padding: 4px;
+      font-size: 0.8rem;
+  }
+  
+  /* 4. Ensure the toggler button is compact */
+  .navbar-toggler {
+    padding: 0.2rem 0.4rem; /* Minimal padding for the toggler */
+    line-height: 1; /* Helps prevent height issues */
+  }
+}

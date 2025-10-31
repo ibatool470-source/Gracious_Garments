@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gracious Garments</title>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Load Google Font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a href="index.html" class="navbar-brand brand-name">
+  <span class="brand-g">Gracious</span>
+  <span class="brand-small">Garments</span>
+</a>
+
+
+
+    <!-- Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Centered Menu -->
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a></li>
+
+      
+        <li class="nav-item"><a class="nav-link" href="brands.html"><i class="fas fa-tags me-1"></i> Brands</a></li>
+        <li class="nav-item"><a class="nav-link" href="compare.html"><i class="fas fa-exchange me-1"></i> Compare</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-info-circle me-1"></i> About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact</a></li>
+       
+        <!-- ✅ Cart inside dropdown (mobile) -->
+        <li class="nav-item d-lg-none">
+          <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+        </li>
+
+        <!-- ✅ Account inside dropdown (mobile) -->
+        <li class="nav-item dropdown d-lg-none">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <i class="fas fa-user"></i>Account</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="signup.HTML"><i class="fas fa-user-plus me-2"></i> Sign Up</a></li>
+
+            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt me-2"></i> Log In</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- ✅ Desktop Right Section (unchanged) -->
+      <ul class="navbar-nav ms-auto align-items-center d-none d-lg-flex">
+        <li class="nav-item">
+          <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+          </div>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="brands.html#panel"><i class="fas fa-shopping-cart"></i></a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" data-bs-toggle="dropdown">
+            <i class="fas fa-user"></i> <span class="ms-1"></span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="signup.HTML"><i class="fas fa-user-plus me-2"></i> Sign Up</a></li>
+            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt me-2"></i> Log In</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section with Single Image -->
+<section class="banner-section">
+  <img src="./IMG/pic2.jpg" alt="Banner">
+  <div class="banner-content">
+    <h1>Welcome to <span>Gracious Garments</span></h1>
+    <p>Explore the brands you desire.</p>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Aesthetic Promo Section -->
+<section class="promo-section py-5 text-white text-center d-flex align-items-center" style="background: linear-gradient(135deg, #f39c12, #ffb84d);">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Text Content -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h2 class="display-5 fw-bold">Discover Your Style</h2>
+        <p class="lead mb-4">Explore the latest trends and timeless classics in our exclusive collections.</p>
+      </div>
+
+      <!-- Image Content -->
+      <div class="col-md-6">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80" alt="Fashion Promo" class="img-fluid rounded shadow" />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Brands Section -->
+<section class="brands-section py-5" id="brands">
+  <div class="container text-center">
+    <h2 class="mb-4">Shop by Brand</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Brand Card -->
+       
+      <div class="col-6 col-md-4">
+        <!-- <a href="brands.html#zara"> -->
+        <div class="brand-card p-3 shadow-sm">
+          <img src="IMG/zaraa.jpg" alt="Zara" class="img-fluid mb-2">
+        </div>
+        </a>
+      </div>
+      
+      <!-- Brand Card -->
+       
+      <div class="col-6 col-md-4">
+        <div class="brand-card p-3 shadow-sm">
+          <img src="./IMG/adidas.png" alt="Adidas" class="img-fluid mb-2">
+          
+        </div>
+        </a>
+      </div>
+      
+       <!-- Brand Card -->
+      <div class="col-6 col-md-4">
+        <div class="brand-card p-3 shadow-sm">
+          <img src="IMG/h&m.jpg" alt="H&M" class="img-fluid mb-2">
+         
+        </div>
+      </div>
+       <!-- Brand Card -->
+      <div class="col-6 col-md-4">
+        <div class="brand-card p-3 shadow-sm">
+          <img src="IMG/fitters.avif" alt="Outfitters" class="img-fluid mb-2">
+          
+        </div>
+      </div>
+        <!-- Brand Card -->
+        <div class="col-6 col-md-4">
+          <div class="brand-card p-3 shadow-sm">
+            <img src="IMG/ethnic.png" alt="Ethnic" class="img-fluid mb-2">
+            
+          </div>
+        </div>
+          <!-- Brand Card -->
+      <div class="col-6 col-md-4">
+        <div class="brand-card p-3 shadow-sm">
+          <img src="IMG/GENZ.jpg" alt="Generation" class="img-fluid mb-2">
+          
+        </div>
+      </div>
+        <!-- Brand Card -->
+        <div class="col-6 col-md-4">
+          <div class="brand-card p-3 shadow-sm">
+            <img src="IMG/j..png" alt="J." class="img-fluid mb-2">
+            
+          </div>
+        </div>
+          <!-- Brand Card -->
+      <div class="col-6 col-md-4">
+        <div class="brand-card p-3 shadow-sm">
+          <img src="IMG/saya.webp" alt="Saya" class="img-fluid mb-2">
+          
+        </div>
+      </div>
+        
+      <!-- Brand Card -->
+        <div class="col-6 col-md-4">
+          <div class="brand-card p-3 shadow-sm">
+            <img src="IMG/alkaram.png" alt="alkaram" class="img-fluid mb-2">
+            
+          </div>
+        </div>
+
+
+    </div>
+
+        <div class="text-center mt-4">
+              <a href="brands.html" class="btn btn-dark px-4">View All Brands</a>
+
+  </div>
+</section>
+
+
+<!-- for women Modern Aesthetic Showcase Section with Dots -->
+<section class="aesthetic-showcase my-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Explore Our Women Collection</h2>
+
+    <!-- Slider Container -->
+    <div class="slider-container">
+
+      <!-- Cards Wrapper -->
+      <div class="masonry-grid">
+
+        <!-- Card 1 -->
+        <div class="hover-card">
+          <div class="card-image">
+            <img class="front" src="./IMG/blazer1.2.webp" alt="Item 1">
+            <img class="back" src="./IMG/blazer1.webp" alt="Item 1 Hover">
+          </div>
+        
+        </div>
+
+        <!-- Card 2 -->
+        <div class="hover-card">
+          <div class="card-image">
+            <img class="front" src="./IMG/dress1.webp" alt="Item 2">
+            <img class="back" src="./IMG/dress1.2.webp" alt="Item 2 Hover">
+          </div>
+          
+        </div>
+
+        <!-- Card 3 -->
+        <div class="hover-card">
+          <div class="card-image">
+            <img class="front" src="./IMG/pants1.webp" alt="Item 3">
+            <img class="back" src="./IMG/pants1.2.webp" alt="Item 3 Hover">
+          </div>
+          
+        </div>
+
+        <!-- Card 4 -->
+        <div class="hover-card">
+          <div class="card-image">
+            <img class="front" src="./IMG/t shirt1.webp" alt="Item 4">
+            <img class="back" src="./IMG/t shirt1.2.webp" alt="Item 4 Hover">
+          </div>
+         
+        </div>
+
+        <!-- Card 5 -->
+        <div class="hover-card">
+          <div class="card-image">
+            <img class="front" src="./IMG/to1.2.webp" alt="Item 5">
+            <img class="back" src="./IMG/top1.webp" alt="Item 5 Hover">
+          </div>
+          
+        </div>
+
+        <!-- Card 6 -->
+        <div class="hover-card">
+          <div class="card-image">
+            <img class="front" src="./IMG/skirt1.avif" alt="Item 6">
+            <img class="back" src="./IMG/skirt1.2.jpg" alt="Item 6 Hover">
+          </div>
+          
+        </div>
+
+      </div> <!-- /.masonry-grid -->
+
+      <!-- Slider Dots -->
+      <div class="slider-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        
+        </div>
+
+    </div> <!-- /.slider-container -->
+
+  </div>
+</section>
+
+<!-- Modern Aesthetic Showcase Section with Dots -->
+<section class="aesthetic-showcase my-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Explore Our Men Collection</h2>
+
+    <!-- Slider Container -->
+    <div class="slider-container">
+
+      <!-- Cards Wrapper -->
+      <div class="masonry-grid">
+
+        <!-- Card 1 -->
+        <div class="hover-card">
+          <div class="card-image">
+            <img class="front" src="./IMG/hodie1.webp" alt="Item 1">
+            <img class="back" src="./IMG/hodie1.2.webp" alt="Item 1 Hover">
+          </div>
+          
+        </div>
+
+        <!-- Card 2 -->
+        <div class="hover-card">
+          <div class="card-image">
+            <img class="front" src="./IMG/mentshirt1.webp" alt="Item 2">
+            <img class="back" src="./IMG/mentshirt1.2.webp" alt="Item 2 Hover">
+          </div>
+          
+        </div>
+
+        <!-- Card 3 -->
+        <div class="hover-card">
+          <div class="card-image">
+            <img class="front" src="./IMG/kurta1.webp" alt="Item 3">
+            <img class="back" src="./IMG/kurta1.2.webp" alt="Item 3 Hover">
+          </div>
+          
+        </div>
+
+        <!-- Card 4 -->
+        <div class="hover-card">
+          <div class="card-image">
+            <img class="front" src="./IMG/mentrouser1.webp" alt="Item 4">
+            <img class="back" src="./IMG/mentrouser1.2.webp" alt="Item 4 Hover">
+          </div>
+         
+        </div>
+
+        <!-- Card 5 -->
+        <div class="hover-card">
+          <div class="card-image">
+            <img class="front" src="./IMG/menshirt1.webp" alt="Item 5">
+            <img class="back" src="./IMG/menshirt1.2.webp" alt="Item 5 Hover">
+          </div>
+         
+        </div>
+
+        <!-- Card 6 -->
+        <div class="hover-card">
+          <div class="card-image">
+            <img class="front" src="./IMG/menjacket1.2.webp" alt="Item 6">
+            <img class="back" src="./IMG/menjacket1.webp" alt="Item 6 Hover">
+          </div>
+         
+        </div>
+
+        
+
+      </div> <!-- /.masonry-grid -->
+
+      <!-- Slider Dots -->
+      <div class="slider-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        </div>
+
+    </div> <!-- /.slider-container -->
+
+  </div>
+</section>
+
+
+
+<!-- Live Chat Button -->
+<button id="liveChatBtn" class="live-chat-btn"><i class="fas fa-comments"></i></button>
+
+<!-- Live Chat Box -->
+<div id="liveChatBox" class="live-chat-box">
+
+  <!-- Header -->
+  <div class="chat-header">
+    Live Chat
+    <button id="closeChatBtn">&times;</button>
+  </div>
+
+  <!-- Messages -->
+  <div id="chatMessages" class="chat-messages"></div>
+
+  <!-- Input -->
+  <div class="chat-input-area">
+    <input id="chatInput" type="text" placeholder="Type a message...">
+    <button id="sendBtn">Send</button>
+  </div>
+
+</div>
+
+
+<section class="team-section">
+    <h6 class="team-heading">Meet Our Creative Team</h6>
+
+    <div class="team-grid">
+
+       
+
+        <!-- Team Member 1 -->
+         <div class="team-card sydney">
+            <div class="card-top-bg"></div>
+            <div class="card-text-overlay pt-3">
+                <div class="name">Anshara</div>
+                <div class="title">Creative Designer</div>
+            </div>
+            <img src="./IMG/cute1.jfi.jfif" class="member-img">
+        </div>
+
+        <!-- Team Member 2 -->
+         <div class="team-card stephani">
+            <div class="card-top-bg"></div>
+            <div class="card-text-overlay pt-3">
+                <div class="name">Iqra Batool</div>
+                <div class="title">Developer</div>
+            </div>
+            <img src="./IMG/cute2.jpeg" class="member-img">
+        </div>
+
+        <!-- Team Member 3 -->
+         <div class="team-card rachel">
+            <div class="card-top-bg"></div>
+            <div class="card-text-overlay pt-3">
+                <div class="name">Arwa</div>
+                <div class="title">Marketer</div>
+            </div>
+            <img src="./IMG/cute3.jpg"class="member-img">
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===== About Us Section ===== -->
+<section class="about-us" id="about">
+  <div class="about-container">
+    
+    <div class="about-image">
+      <img src="./IMG/mw.jpg" alt="">
+      
+    </div>
+
+    <div class="about-content">
+      <h2>About Us</h2>
+      <h3>Welcome to Gracious Garments</h3>
+      <p>
+        At <strong>Gracious Garments</strong>, we believe fashion is more than just clothing — 
+        it’s a form of self-expression. Since our establishment, we’ve been dedicated to crafting 
+        stylish, comfortable, and premium-quality garments for both men and women.
+      </p>
+
+      <p>
+        Our collections blend timeless designs with modern trends to help you look elegant on every occasion. 
+        We focus on quality fabrics, fine stitching, and detail-oriented craftsmanship to bring you the best in fashion.
+      </p>
+
+      <div class="about-highlights">
+        <div class="highlight">
+          <i class="fas fa-tshirt"></i>
+          <h4>Premium Quality</h4>
+          <p>Every outfit is crafted from high-grade fabric ensuring lasting comfort and elegance.</p>
+        </div>
+
+        <div class="highlight">
+          <i class="fas fa-users"></i>
+          <h4>Customer Focused</h4>
+          <p>We value our customers and design each collection keeping your needs in mind.</p>
+        </div>
+
+        <div class="highlight">
+          <i class="fas fa-globe"></i>
+          <h4>Modern Trends</h4>
+          <p>Our designers stay ahead of the curve to bring you the latest in global fashion.</p>
+        </div>
+      </div>
+
+      <a href="contact.html" class="about-btn">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="testimonial-section w-100">
+    <div class="container d-flex justify-content-center">
+        <div class="testimonial-block">
+            <!-- Quote Icon -->
+            <h3 class="testimonial-heading">What Our Clients Say</h3>
+
+            <!-- Testimonial Display Area -->
+            <p id="testimonial-text" class="mb-4">
+                <!-- Content will be injected by JavaScript -->
+            </p>
+
+            <!-- Profile Name and Title -->
+            <div class="profile-info">
+                <p id="profile-name" class="mb-1"></p>
+                <p id="profile-title" class="mb-0"></p>
+            </div>
+
+            <!-- Profile Image Selector Row -->
+            <div id="profile-selector" class="profile-selector">
+                <!-- Profile thumbnails will be injected by JavaScript -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<button id="backToTop" class="btn btn-warning" style="position: fixed; bottom: 30px; right: 30px; display: none;">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+
+    <footer class="footer-glass">
+  <div class="footer-top">
+    <div class="footer-container">
+
+      <!-- Company Info -->
+      <div class="footer-col company-info">
+      <h2 class="footer-brand">Gracious <span>GARMENTS</span></h2>
+        <p>Premium fashion for men & women. Elevate your style with our curated collections.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col quick-links">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="brands.html">Brands</a></li>
+          <li><a href="compare.css">Compare</a></li>
+          <li><a href="compare.html">Contact</a></li>
+          </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-col social-media">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-col newsletter">
+        <h4>Subscribe</h4>
+        <p>Get 10% off your first order</p>
+        <form id="newsletterForm">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Legal -->
+  <div class="footer-bottom">
+   
+    <p>© 2025 Gracious Garments. All rights reserved. Designed & Developed by <strong>Iqra Batool , Ansharah Kashif , Arwa Fayyaz</strong>.</p>
+  </div>
+</footer>
+
+
+
+<!-- Scripts -->
+<script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
