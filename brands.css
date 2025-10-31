@@ -1,0 +1,339 @@
+.brands-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 8%;
+  gap: 20px;
+  margin-top: 100px;   /* adjust if your navbar height is different */
+}
+
+
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #666;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+
+
+    /* ---------- Filters ---------- */
+    
+    .filters {
+      display:flex;gap:12px;align-items:center;padding:20px 6%;flex-wrap:wrap;background:#fff;border-bottom:1px solid #f1f1f1;
+    }
+    .filter-label{font-weight:700;color:#080707;margin-right:8px}
+    .select-brand{min-width:220px;padding:8px;border-radius:8px;border:1px solid #0f0f0f}
+    .gender-toggle button{border-radius:8px}
+    .gender-toggle .active{background:var(--accent);color:#080303;border-color:var(--accent)}
+
+    /* ---------- Product grid ---------- */
+    .brand-products{padding:28px 6% 60px}
+    .products-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .product-card{
+      background:#fff;border-radius:10px;border:1px solid #eee;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .product-card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,0.06)}
+    .product-thumb{
+      width:100%;height:var(--card-h);object-fit:cover;display:block;
+    }
+    .product-meta{padding:12px 14px 18px;display:flex;flex-direction:column;gap:6px}
+    .product-title{font-weight:700;font-size:15px;margin:0;color:#222}
+    .product-price{color:var(--accent);font-weight:800;font-size:15px}
+
+    /* ---------- Modal ---------- */
+    .product-modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:1400}
+    .product-modal.show { display:flex }
+    .modal-backdrop-custom{position:absolute;inset:0;background:rgba(0,0,0,.36)}
+    .modal-card{
+      position:relative;background:#fff;width:94%;max-width:1100px;border-radius:12px;z-index:1401;box-shadow:0 20px 60px rgba(0,0,0,.18);display:flex;gap:18px;overflow:hidden;padding:18px;
+    }
+    .modal-close{position:absolute;right:12px;top:10px;border:none;background:#fff;border-radius:50%;width:38px;height:38px;font-size:22px;cursor:pointer}
+    .modal-left{width:44%;display:flex;gap:14px;align-items:flex-start}
+    .modal-main{flex:1;background:#f7f7f7;border-radius:8px;display:flex;align-items:center;justify-content:center;min-height:360px;overflow:hidden}
+    .modal-main img{width:100%;height:100%;object-fit:contain}
+    .modal-thumbs{width:82px;display:flex;flex-direction:column;gap:10px;overflow:auto;padding-right:4px}
+    .modal-thumbs img{width:100%;height:84px;object-fit:cover;border-radius:6px;cursor:pointer;border:2px solid transparent}
+    .modal-thumbs img.active{border-color:var(--accent)}
+
+    .modal-right{width:56%;display:flex;flex-direction:column;gap:12px}
+    .modal-right h4{margin:0;font-size:20px}
+    .modal-right .price{color:var(--accent);font-weight:800;font-size:18px;margin:0}
+    .modal-right .desc{color:#555;line-height:1.5}
+    .modal-right .options{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .modal-right select,.modal-right input[type="number"]{padding:8px;border-radius:8px;border:1px solid #ddd}
+    .modal-actions{display:flex;gap:12px;margin-top:12px}
+    .btn-ghost{background:#fff;color:#222;border:1px solid #ddd;padding:8px 12px;border-radius:8px}
+
+    /* ---------- Footer ---------- */
+
+
+    /* ... (your existing CSS) ... */
+
+/* Responsive */
+@media (max-width: 980px) and (min-width: 769px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-image img {
+    max-width: 360px;
+  }
+
+  .modal-left,
+  .modal-right {
+    width: 48%;
+  }
+
+  .modal-card {
+    /* ❌ Remove flex-direction: column */
+    max-width: 720px;
+    gap: 15px;
+  }
+
+  .modal-thumbs {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+  }
+
+  .modal-thumbs img {
+    height: 72px;
+    width: 120px;
+  }
+
+  .modal-main {
+    min-height: 300px;
+  }
+}
+
+/* New media query for screens smaller than 850px */
+@media (max-width: 850px) {
+  .modal-card {
+    flex-direction: column; /* Stack image and details vertically */
+    max-width: 94%; /* Allow it to take more width on small screens */
+    padding: 15px; /* Adjust padding */
+    gap: 15px; /* Adjust gap between sections */
+  }
+
+  .modal-left,
+  .modal-right {
+    width: 100%; /* Full width for both sections */
+  }
+
+  .modal-left {
+    flex-direction: column; /* Stack main image and thumbnails */
+    gap: 10px;
+  }
+
+  .modal-main {
+    min-height: 280px; /* Adjust main image height for smaller screens */
+  }
+
+  .modal-thumbs {
+    flex-direction: row; /* Keep thumbnails in a row */
+    width: 100%;
+    height: auto;
+    overflow-x: auto; /* Allow horizontal scrolling if many thumbnails */
+    justify-content: center; /* Center thumbnails */
+    padding-bottom: 5px; /* Add some padding at the bottom for scrollbar */
+  }
+
+  .modal-thumbs img {
+    height: 60px; /* Smaller thumbnail height */
+    width: 80px; /* Smaller thumbnail width */
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .modal-right h4 {
+    font-size: 18px; /* Slightly smaller title */
+  }
+
+  .modal-right .price {
+    font-size: 16px; /* Slightly smaller price */
+  }
+
+  .modal-actions {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .modal-actions button {
+    width: 100%; /* Full width buttons */
+  }
+}
+
+
+@media(max-width:560px){
+  body{padding-top:140px}
+  .products-grid{grid-template-columns:1fr}
+  .brands-hero{padding:28px 6%}
+  .hero-image img{max-width:100%}
+  .modal-main{min-height:220px}
+  .modal-thumbs img{height:64px;width:96px}
+}
+
+/* ... (rest of your existing CSS) ... */
+
+    /* Make cart badge smaller and pinned to top-right of the cart icon */
+    .navbar .nav-link#cartToggle,
+    .navbar .nav-link#cartToggleMobile {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    /* small circular badge positioned at top-right of the icon */
+    #cartCount,
+    #cartCountMobile {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      transform: none;
+      min-width: 18px;
+      height: 18px;
+      padding: 0 5px;
+      font-size: 11px;
+      line-height: 18px;
+      border-radius: 9px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      z-index: 12000;
+    }
+
+    /* optional: tighten spacing on desktop link so badge sits nicely */
+    @media (min-width: 992px) {
+      .navbar .nav-link#cartToggle { padding-right: 8px; }
+    }
+
+    /* Make cart panel border dashed and color it; override inline style */
+    #cartPanel {
+      border: 2px double #f39c12 !important;
+      
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    /* Style checkout button to use brand orange */
+    #checkoutBtn {
+      background-color: #f39c12 !important;
+      border-color: #f39c12 !important;
+      color: #fff !important;
+      transition: filter .12s ease;
+    }
+
+    /* Slight hover effect for checkout button */
+    #checkoutBtn:hover {
+      filter: brightness(.95);
+    }
+
+    /* New media query for screens smaller than 850px */
+@media (max-width: 850px) {
+  /* 1. Crucial change: Align modal content to the top
+        to ensure the top of the card is visible */
+  .product-modal {
+    align-items: flex-start; /* Align content to the top */
+    padding-top: 20px; /* Add some top padding */
+    padding-bottom: 20px; /* Add bottom padding */
+  }
+
+  /* 2. Crucial change: Make the modal card itself scrollable */
+  .modal-card {
+    flex-direction: column;
+    max-width: 94%;
+    padding: 15px;
+    gap: 15px;
+    /* Enable vertical scrolling if content overflows */
+    max-height: calc(100vh - 40px); /* Max height is viewport height minus padding */
+    overflow-y: auto; /* Enable scrolling */
+    -webkit-overflow-scrolling: touch; /* Better scrolling on iOS */
+  }
+
+  /* Set the modal sections to full width */
+  .modal-left,
+  .modal-right {
+    width: 100%;
+  }
+
+  .modal-left {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-main {
+    min-height: 280px;
+  }
+
+  .modal-thumbs {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    justify-content: center;
+    padding-bottom: 5px;
+  }
+
+  .modal-thumbs img {
+    height: 60px;
+    width: 80px;
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .modal-right h4 {
+    font-size: 18px;
+  }
+
+  .modal-right .price {
+    font-size: 16px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .modal-actions button {
+    width: 100%;
+  }
+}
