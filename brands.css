@@ -199,7 +199,6 @@
 
 
 @media(max-width:560px){
-  body{padding-top:140px}
   .products-grid{grid-template-columns:1fr}
   .brands-hero{padding:28px 6%}
   .hero-image img{max-width:100%}
@@ -337,3 +336,4 @@
     width: 100%;
   }
 }
+
