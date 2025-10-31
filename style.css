@@ -392,7 +392,6 @@ body{
   /* Ensure the mobile search bar is styled correctly */
   .search-bar.d-lg-none input {
     color: #000 !important; 
-    background: #fff !important;
   }
   
   .search-bar.d-lg-none button {
@@ -1551,4 +1550,5 @@ body{
     padding: 0.2rem 0.4rem; /* Minimal padding for the toggler */
     line-height: 1; /* Helps prevent height issues */
   }
+
 }
