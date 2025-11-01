@@ -389,10 +389,7 @@ body{
 @media (max-width: 992px) {
   /* Adjustments for better mobile layout */
   
-  /* Ensure the mobile search bar is styled correctly */
-  .search-bar.d-lg-none input {
-    color: #000 !important; 
-  }
+  
   
   .search-bar.d-lg-none button {
       color: #000 !important; 
@@ -1552,3 +1549,4 @@ body{
   }
 
 }
+
